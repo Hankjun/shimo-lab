@@ -4,7 +4,7 @@ const studios=[
  {id:'garden',name:'苏州园林',type:'园林空间',description:'沿门楼、曲廊、庭院和藏书阁，走完项目周报的取材、共审与归档。',paper:'#e2e9d9',ink:'#3d5c4f',mark:'#8b5d45'},
  {id:'periodic',name:'元素周期',type:'元素实验台',description:'从第 14 族元素出发，查找石墨组件和 AI 技能，组合适合任务的能力。',paper:'#dbe8e7',ink:'#294953',mark:'#277369'},
  {id:'consult',name:'咨询画布',type:'咨询白板',description:'移动和连接问题、证据、假设与行动卡片，把讨论变成可以验证的方案。',paper:'#e5e5ed',ink:'#434859',mark:'#77619a'},
- {id:'reading',name:'精读手帐',type:'手帐星图',description:'沿主题星团浏览相连的手帐，打开单篇阅读记录，用康奈尔双栏整理线索。',paper:'#dfe0eb',ink:'#303750',mark:'#84678f'}
+ {id:'reading',name:'精读手帐',type:'双页手帐',description:'从书架打开手帐，在左页记线索与问题，右页整理精读笔记和读后总结。',paper:'#dfe0eb',ink:'#303750',mark:'#84678f'}
 ];
 const $=id=>document.getElementById(id);
 const stage=$('stage'),cards=$('cards'),tools=$('galleryTools');
@@ -52,18 +52,16 @@ function art(canvas,item){
   c.setLineDash([4,3]);line(nodes.map(([x,y])=>[x+27,y+20]),item.mark);c.setLineDash([]);
   nodes.forEach(([x,y],i)=>{box(x,y,60,41,'#f7f4f1');box(x,y,60,6,i===2?'#af8d5c':'#8a78a0');box(x+8,y+14,38,2,'#797285');box(x+8,y+22,27,2,'#a09aab')});
  }else{
-  box(0,0,240,180,'#253047');
-  const hubs=[[53,74],[111,54],[177,83],[116,124]];
-  line([...hubs,hubs[0]],'#7d84a6',1);
-  hubs.forEach(([x,y],g)=>{
-   const colors=['#e8af93','#a5bcf0','#a6d8c7','#d5aee9'];
-   dot(x,y,4,colors[g]);
-   for(let i=0;i<28;i++){
-    const a=i*2.399963,r=4+Math.sqrt(i)*5.3, u=x+Math.cos(a)*r,v=y+Math.sin(a)*r*.8;
-    if(i%3===0)line([[x,y],[u,v]],colors[g]+'45',.65);
-    dot(u,v,i%9===0?2:1,colors[g]);
-   }
-  });
+  box(0,0,240,180,'#322d2b');
+  poly([[24,44],[106,29],[120,36],[135,30],[215,46],[216,148],[133,139],[120,147],[102,139],[22,150]],'#725d52');
+  poly([[29,42],[103,28],[118,34],[118,141],[103,133],[29,144]],'#d9c7a8');
+  poly([[121,35],[137,29],[211,43],[212,143],[135,132],[121,140]],'#eedcc0');
+  line([[120,38],[120,140]],'#847260',2);
+  for(let i=0;i<7;i++){
+   line([[39,66+i*10],[102,55+i*10]],'#9a816c',1);
+   line([[137,55+i*10],[197,65+i*10]],'#a58c75',1);
+  }
+  box(170,94,22,18,'#9a594b');box(56,43,35,6,'#6e594b');
  }
 }
 function toneCard(canvas,item){
