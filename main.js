@@ -5,9 +5,9 @@ const studios=[
  {id:'periodic',name:'元素周期',type:'元素实验台',description:'从第 14 族元素出发，查找石墨组件和 AI 技能，组合适合任务的能力。',paper:'#dbe8e7',ink:'#294953',mark:'#277369'},
  {id:'consult',name:'咨询画布',type:'咨询白板',description:'移动和连接问题、证据、假设与行动卡片，把讨论变成可以验证的方案。',paper:'#e5e5ed',ink:'#434859',mark:'#77619a'},
  {id:'reading',name:'精读手帐',type:'双页手帐',description:'从书架打开手帐，在左页记线索与问题，右页整理精读笔记和读后总结。',paper:'#dfe0eb',ink:'#303750',mark:'#84678f'},
- {id:'gauss',name:'高思控制 LAB',type:'金刚石 · 热处理过程控制',description:'按设备和批次记录热处理过程，汇总异常事实与复盘结论。',paper:'#d9e8f0',ink:'#344f65',mark:'#608eb1'},
- {id:'advisor',name:'1 号位 AI LAB',type:'石墨烯 · 给老板做军师',description:'把待拍板事项、经营事实、备选方案和下一步压成一页决策简报。',paper:'#e0e9df',ink:'#33493c',mark:'#6a9b7e'},
- {id:'talent',name:'Talent 网络 LAB',type:'富勒烯 · 人才寻访',description:'从需求画像出发，整理候选线索、引荐路径和下一次跟进。',paper:'#e9e0ee',ink:'#503c60',mark:'#906fa8'}
+ {id:'gauss',name:'高思控制',type:'金刚石 · 热处理过程控制',description:'按设备和批次记录热处理过程，汇总异常事实与复盘结论。',paper:'#d9e8f0',ink:'#344f65',mark:'#608eb1'},
+ {id:'advisor',name:'1 号位 AI',type:'石墨烯 · 给老板做军师',description:'把待拍板事项、经营事实、备选方案和下一步压成一页决策简报。',paper:'#e0e9df',ink:'#33493c',mark:'#6a9b7e'},
+ {id:'talent',name:'Talent 网络',type:'富勒烯 · 人才寻访',description:'从需求画像出发，整理候选线索、引荐路径和下一次跟进。',paper:'#e9e0ee',ink:'#503c60',mark:'#906fa8'}
 ];
 const $=id=>document.getElementById(id);
 const stage=$('stage'),cards=$('cards'),tools=$('galleryTools');
